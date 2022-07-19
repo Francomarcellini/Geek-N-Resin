@@ -1,0 +1,202 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.418);
+}
+/* MODIFICACIONES DEL  HEADER  */
+header{
+    background-color: rgb(236, 232, 232);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px
+}
+.header__portada{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-family: 'League Gothic', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 0px;
+}
+.header__navegacion--items{
+    padding: 10PX;
+}
+.header__navegacion--items a{
+    text-decoration: none;
+    color: rgb(9, 10, 10);
+    font-size: 30px;
+    font-family: 'League Gothic', sans-serif;
+
+}
+.header__navegacion--items li{
+    padding: 2px;
+}
+/* MODIFICACIONES DEL  MAIN  */
+main{
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+}
+.galeria__img--1{
+    height: auto;
+    width: 250px;
+    padding: 5px;
+}
+.gastly{
+    height: auto;
+    width: 350px;
+    padding: 5px;
+
+}
+.productos{
+    display: grid;
+    height: 100vw;
+    width: 100VW;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas:"imga3 imga2 imga1"
+                "imga3 imgb2 imgb1"
+                "imgc1 imgc2 imgc3 ";
+    row-gap: 12px;
+    column-gap: 12px;
+}
+.imga1{
+    grid-area: imga1;
+    background-image: url(../resources/A1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 5px;
+}
+.imga2{
+    grid-area: imga2;
+    background-image: url(../resources/B1.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.imga3{
+    grid-area: imga3;
+    background-image: url(../resources/C1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+}
+.imgb1{
+    grid-area: imgb1;
+    background-image: url(../resources/D1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.imgb2{
+    grid-area: imgb2;
+    background-image: url(../resources/F1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.imgc1{
+    grid-area: imgc1;
+    background-image: url(../resources/G1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.imgc2{
+    grid-area: imgc2;
+    background-image: url(../resources/H1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.imgc3{
+    grid-area: imgc3;
+    background-image: url(../resources/I1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+/* MODIFICACIONES GENERALES */
+ul{
+    color: black;
+    list-style: none;
+}
+li{
+    display: inline;
+}
+.formulario__ingreso{
+    text-align: left;
+}
+li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+.membresia__main p{
+    font-family: 'League Gothic', sans-serif;
+    font-size: 30px;
+}
+/* MEDIA QUIERIE PARA CELU */
+@media (min-width: 320px) and (max-width: 575px) {
+    header{
+        background-color: rgb(236, 232, 232);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: initial;
+    }
+    .productos{
+        display: grid;
+        width: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows:  300px 300px 300px 300px 300px 300px 300px 300px ;
+        grid-template-areas:"imga1 "
+        "imga2"
+        "imga3"
+        "imgb1"
+        "imgb2"
+        "imgc1"
+        "imgc2"
+        "imgc3";
+        row-gap: 12px;
+        column-gap: 12px;
+    }
+    footer{
+        display: none;
+    }
+}
+/* MEDIA QUIERIE PARA TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+    .productos{
+        display: grid;
+        height: 100vw;
+        width: 100VW;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr ;
+        grid-template-areas:"imga3 imga2 imga1"
+                    "imga3 imgb2 imgb1"
+                    "imgc1 imgc2 imgc3 ";
+        row-gap: 12px;
+        column-gap: 12px;
+        }
+    footer{
+        position: absolute end
+        ;
+    }
+}
